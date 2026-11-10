@@ -2,15 +2,6 @@
 
 A responsive, accessible, dependency-free research website with an ORNL-inspired green-and-blue palette for **Spiking Transformers for Neuromorphic AI**, the ORNL / Duke / University of Delaware collaboration. Prepared as a GitHub Pages test site for SC26.
 
-## Preview locally
-
-```bash
-cd /home/jhd/Work/snn_github_page
-python3 -m http.server 8000 --bind 127.0.0.1
-```
-
-Open http://localhost:8000. All assets and downloads use relative links, so the site also works under a GitHub Pages repository path. No Node, npm, build, or external font service is required.
-
 ## Maintain the page
 
 - `index.html`: research overview, demos, publication/resources, roadmap, people, and contact.
