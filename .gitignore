@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 .preview/
+
+# Retain the source presentation locally without publishing it.
+SPIKE-SC26-Demo-3.pptx

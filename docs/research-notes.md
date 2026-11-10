@@ -4,7 +4,7 @@ This is an initial research hub prepared for SC26. Content is based on the suppl
 
 ## Sources
 
-- [SPIKE SC26 presentation](../SPIKE-SC26-Demo-3.pptx): project title, DOE Genesis Mission Phase 1 context, November 18, 2026 Chicago demo date, research directions, demo presenters, collaborator names, and roadmap.
+- SPIKE SC26 presentation (not distributed on this site): project title, DOE Genesis Mission Phase 1 context, November 18, 2026 Chicago demo date, research directions, demo presenters, collaborator names, and roadmap.
 - [SuperNeuroMAT paper](https://arxiv.org/abs/2608.08479): paper title, complete citation, simulator description.
 - [ORNL/superneuromat](https://github.com/ORNL/superneuromat): public software and documentation entry points.
 

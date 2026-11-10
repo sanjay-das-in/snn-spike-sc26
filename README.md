@@ -17,7 +17,7 @@ Open http://localhost:8000. All assets and downloads use relative links, so the 
 - `styles.css`: responsive layout and visual design.
 - `app.js`: educational leaky integrate-and-fire visualization; honors reduced motion and pauses in background tabs.
 - `assets/superneuromat.bib`: downloadable complete paper citation.
-- `SPIKE-SC26-Demo-3.pptx`: supplied source presentation, linked for download.
+- The source SC26 presentation is retained locally and excluded from publication.
 - `docs/research-notes.md`: sources, interpretation limits, and editorial checks.
 
 Edit and push to `main` to update the GitHub Pages site. Hosting is configured to serve `/` on `main` with `.nojekyll`. Keep this independent repository separate from any parent workspace repository.

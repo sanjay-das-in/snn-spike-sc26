@@ -20,3 +20,7 @@ The user explicitly approved public publication of the website, supplied SC26 pr
 ## Green-and-blue design refresh
 
 Updated the site with an ORNL-inspired palette (deep blue, blue links, green accents), larger text, and clearer research copy. Rechecked all five viewport widths, interactive controls, reduced-motion behavior, and browser errors successfully. The existing research scope and evidence qualifications are preserved.
+
+## Presentation removal
+
+Removed all presentation download links and excluded the PowerPoint file from the current published source at the user’s request. The local original is retained. Previously published commits still contain the file in GitHub history.
