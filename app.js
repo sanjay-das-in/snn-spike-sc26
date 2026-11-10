@@ -36,7 +36,7 @@
     const spike = state > 1;
     samples.push({value:state,spike}); if(samples.length>100)samples.shift();
     if(spike) { state=0;spikes++; }
-    if(spike && spikes%5===0) counter.textContent=`${spikes} spikes`;
+    if(spike) counter.textContent=`${spikes} ${spikes === 1 ? 'spike' : 'spikes'}`;
     draw();
   },160);
   setLabel();draw();
