@@ -14,7 +14,7 @@
     const w = canvas.width, h = canvas.height, left = 38, top = 25, bottom = h - 35;
     const y = value => bottom - value * (bottom - top) / 1.3;
     ctx.clearRect(0,0,w,h);
-    ctx.font = '11px monospace'; ctx.fillStyle = '#c5dfed';
+    ctx.font = '12px Georgia'; ctx.fillStyle = '#c5dfed';
     for (const value of [0,0.5,1]) {
       ctx.strokeStyle = value === 1 ? '#65bce8' : '#21516c';
       ctx.setLineDash(value === 1 ? [5,6] : []);
