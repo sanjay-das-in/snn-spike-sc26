@@ -14,18 +14,18 @@
     const w = canvas.width, h = canvas.height, left = 38, top = 25, bottom = h - 35;
     const y = value => bottom - value * (bottom - top) / 1.3;
     ctx.clearRect(0,0,w,h);
-    ctx.font = '11px monospace'; ctx.fillStyle = '#abc6b1';
+    ctx.font = '11px monospace'; ctx.fillStyle = '#c5dfed';
     for (const value of [0,0.5,1]) {
-      ctx.strokeStyle = value === 1 ? '#a8a782' : '#2b493c';
+      ctx.strokeStyle = value === 1 ? '#65bce8' : '#21516c';
       ctx.setLineDash(value === 1 ? [5,6] : []);
       ctx.beginPath(); ctx.moveTo(left,y(value)); ctx.lineTo(w,y(value)); ctx.stroke();
       ctx.fillText(value.toFixed(1),0,y(value)+4);
     }
-    ctx.setLineDash([]); ctx.strokeStyle = '#b8ebcb'; ctx.lineWidth = 2; ctx.beginPath();
+    ctx.setLineDash([]); ctx.strokeStyle = '#9fda75'; ctx.lineWidth = 2; ctx.beginPath();
     samples.forEach((sample,i) => { const x = left + i * (w-left)/100; if(i===0) ctx.moveTo(x,y(sample.value)); else ctx.lineTo(x,y(sample.value)); });
     ctx.stroke();
-    samples.forEach((sample,i) => { if(!sample.spike) return; const x = left+i*(w-left)/100; ctx.fillStyle='#e4c49a'; ctx.beginPath();ctx.arc(x,y(sample.value),4,0,Math.PI*2);ctx.fill(); });
-    ctx.fillStyle = '#abc6b1'; ctx.fillText('discrete simulation steps →',left,h-8);
+    samples.forEach((sample,i) => { if(!sample.spike) return; const x = left+i*(w-left)/100; ctx.fillStyle='#6bc6f0'; ctx.beginPath();ctx.arc(x,y(sample.value),4,0,Math.PI*2);ctx.fill(); });
+    ctx.fillStyle = '#c5dfed'; ctx.fillText('discrete simulation steps →',left,h-8);
   }
   slider.addEventListener('input', () => { const value=(Number(slider.value)/100).toFixed(2); output.value=value; summary.textContent=`Input strength ${value}. The neuron accumulates input and resets after firing.`; });
   pause.addEventListener('click',() => { running=!running;setLabel(); });

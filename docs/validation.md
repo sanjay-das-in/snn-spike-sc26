@@ -16,3 +16,7 @@ The user explicitly approved public publication of the website, supplied SC26 pr
 - Repository: https://github.com/sanjay-das-in/snn-spike-sc26
 - GitHub Pages target: https://sanjay-das-in.github.io/snn-spike-sc26/
 - Publication source: `main`, repository root.
+
+## Green-and-blue design refresh
+
+Updated the site with an ORNL-inspired palette (deep blue, blue links, green accents), larger text, and clearer research copy. Rechecked all five viewport widths, interactive controls, reduced-motion behavior, and browser errors successfully. The existing research scope and evidence qualifications are preserved.

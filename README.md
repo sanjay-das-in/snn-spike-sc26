@@ -1,6 +1,6 @@
 # SPIKE research hub
 
-A responsive, accessible, dependency-free research website for **Spiking Transformers for Neuromorphic AI**, the ORNL / Duke / University of Delaware collaboration. Prepared as a GitHub Pages test site for SC26.
+A responsive, accessible, dependency-free research website with an ORNL-inspired green-and-blue palette for **Spiking Transformers for Neuromorphic AI**, the ORNL / Duke / University of Delaware collaboration. Prepared as a GitHub Pages test site for SC26.
 
 ## Preview locally
 
