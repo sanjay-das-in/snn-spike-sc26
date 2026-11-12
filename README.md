@@ -7,6 +7,7 @@ A responsive, accessible, dependency-free research website with an ORNL-inspired
 - `index.html`: research overview, demos, publication/resources, roadmap, people, and contact.
 - `styles.css`: responsive layout and visual design.
 - `app.js`: educational leaky integrate-and-fire visualization; honors reduced motion and pauses in background tabs.
+- `assets/media/`: web-ready demo recordings, animation, figures, and video posters.
 - `assets/superneuromat.bib`: downloadable complete paper citation.
 - The source SC26 presentation is retained locally and excluded from publication.
 - `docs/research-notes.md`: sources, interpretation limits, and editorial checks.

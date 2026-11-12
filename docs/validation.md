@@ -24,3 +24,12 @@ Updated the site with an ORNL-inspired palette (deep blue, blue links, green acc
 ## Presentation removal
 
 Removed all presentation download links and excluded the PowerPoint file from the current published source at the user’s request. The local original is retained. Previously published commits still contain the file in GitHub history.
+
+## Research media refresh — November 12, 2026
+
+- Verified both recorded videos play in Chromium and the attention animation has working play/pause controls.
+- Verified all three figure dialogs open, display their images, close with Escape, and restore keyboard focus.
+- Confirmed no horizontal page overflow at 1440, 1024, 768, 390, and 360 pixels.
+- Confirmed reduced-motion mode leaves the animation and neuron simulation paused initially.
+- Rechecked existing neuron controls and found no browser JavaScript errors.
+- New media use relative paths, deferred video loading, and web-ready copies. The original large media files remain local and are excluded from publication.

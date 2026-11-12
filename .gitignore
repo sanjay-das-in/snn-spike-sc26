@@ -5,3 +5,9 @@ __pycache__/
 
 # Retain the source presentation locally without publishing it.
 SPIKE-SC26-Demo-3.pptx
+
+# Source media retained locally; publish web-ready versions from assets/media/.
+assets/DOE_Trained_QKV.mp4
+assets/graph_stpd_learning_matching_ann_less_energy_slow.mp4
+assets/neuro-morphic spiking attention_10s.gif
+assets/Screenshot*.png

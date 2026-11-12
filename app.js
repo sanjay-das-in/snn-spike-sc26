@@ -41,3 +41,53 @@
   },160);
   setLabel();draw();
 })();
+
+
+// Keep the decorative animation optional, and pause media outside the viewport.
+(() => {
+  const flow = document.getElementById('attention-flow');
+  const toggle = document.getElementById('flow-toggle');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let userPaused = reduced.matches;
+  function flowLabel() {
+    toggle.textContent = flow.paused ? 'Play animation ▶' : 'Pause animation Ⅱ';
+    toggle.setAttribute('aria-pressed', String(!flow.paused));
+  }
+  toggle.addEventListener('click', () => {
+    userPaused = !flow.paused;
+    if (flow.paused) flow.play().catch(flowLabel); else flow.pause();
+  });
+  flow.addEventListener('play', flowLabel);
+  flow.addEventListener('pause', flowLabel);
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      const video = entry.target;
+      if (!entry.isIntersecting) video.pause();
+      else if (video === flow && !userPaused && !reduced.matches) video.play().catch(flowLabel);
+    }
+  }, {threshold:0.15});
+  document.querySelectorAll('video').forEach(video => {
+    observer.observe(video);
+    video.addEventListener('play', () => {
+      video.dataset.playing = 'true';
+      document.querySelectorAll('video').forEach(other => {if(other !== video) other.pause();});
+    });
+    video.addEventListener('pause', () => {video.dataset.playing = 'false';});
+  });
+  reduced.addEventListener('change', () => {if(reduced.matches){userPaused=true;flow.pause();}});
+  document.addEventListener('visibilitychange', () => {if(document.hidden) document.querySelectorAll('video').forEach(video => video.pause());});
+  const dialog = document.getElementById('figure-dialog');
+  const figureImage = document.getElementById('figure-image');
+  document.querySelectorAll('.figure-open').forEach(button => {
+    button.addEventListener('click', () => {
+      figureImage.src = button.dataset.figure;
+      figureImage.alt = button.querySelector('img').alt;
+      document.getElementById('figure-title').textContent = button.dataset.title;
+      dialog.showModal();
+      document.body.classList.add('figure-active');
+    });
+  });
+  document.getElementById('figure-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('close', () => document.body.classList.remove('figure-active'));
+  dialog.addEventListener('click', event => {if(event.target === dialog){const bounds=dialog.getBoundingClientRect();if(event.clientX<bounds.left || event.clientX>bounds.right || event.clientY<bounds.top || event.clientY>bounds.bottom) dialog.close();}});
+})();
